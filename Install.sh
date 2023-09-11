@@ -35,7 +35,8 @@ if [ -d "$HOME/.ElaXan/$folderName" ]; then
 fi
 
 cd $HOME/.ElaXan
-git clone https://github.com/Score-Inc/GCAndroid.git
+#git clone https://github.com/Score-Inc/GCAndroid.git
+git clone https://github.com/dtpl-redjoker/GCAndroid.git
 if [[ ! -d "$folderName" ]]; then
     echo "Install Failed!"
     exit 1
