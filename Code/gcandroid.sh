@@ -102,13 +102,13 @@ echo $line
 if [ ! -f $Path_Repojson ]; then
     echo "{
     \"Grasscutter\": \"https://github.com/Grasscutters/Grasscutter.git\",
-    \"Resources\": \"https://gitlab.com/YuukiPS/GC-Resources/-/archive/3.4/GC-Resources-3.4.zip\"
+    \"Resources\": \"https://gitlab.com/YuukiPS/GC-Resources/-/archive/3.2/GC-Resources-3.2.zip\"
 }" >$Path_Repojson
 else
     if [ ! -s $Path_Repojson ]; then
         echo "{
     \"Grasscutter\": \"https://github.com/Grasscutters/Grasscutter.git\",
-    \"Resources\": \"https://gitlab.com/YuukiPS/GC-Resources/-/archive/3.4/GC-Resources-3.4.zip\"
+    \"Resources\": \"https://gitlab.com/YuukiPS/GC-Resources/-/archive/3.2/GC-Resources-3.2.zip\"
 }" >$Path_Repojson
         echo "${RC}Error${WC} : repo.json is empty! We have fixed it for you!"
     fi
@@ -116,7 +116,7 @@ else
     if ! (jq . $Path_Repojson &>/dev/null); then
         echo "{
     \"Grasscutter\": \"https://github.com/Grasscutters/Grasscutter.git\",
-    \"Resources\": \"https://gitlab.com/YuukiPS/GC-Resources/-/archive/3.4/GC-Resources-3.4.zip\"
+    \"Resources\": \"https://gitlab.com/YuukiPS/GC-Resources/-/archive/3.2/GC-Resources-3.2.zip\"
 }" >$Path_Repojson
         echo "${RC}Error${WC} : repo.json is broken! We have fixed it for you to default!"
     fi
