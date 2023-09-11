@@ -69,7 +69,7 @@ ResetSettingsJSON() {
         rm $Path_Repojson
         echo "{
     \"Grasscutter\": \"https://github.com/Grasscutters/Grasscutter.git\",
-    \"Resources\": \"https://gitlab.com/YuukiPS/GC-Resources/-/archive/3.4/GC-Resources-3.4.zip\"
+    \"Resources\": \"https://gitlab.com/YuukiPS/GC-Resources/-/archive/3.2/GC-Resources-3.2.zip\"
 }" > "$Path_Repojson"
         echo "${GC}repo.json file reset to default settings${WC}"
         echo
