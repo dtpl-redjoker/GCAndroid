@@ -290,8 +290,8 @@ Pull_DockerGS_Image() {
         fi
         sudo dockerd --iptables=false &>/dev/null &
         sleep 2s
-        Run "sudo docker pull siakbary/dockergs:alpine-gc-3.4" "Pull DockerGS Image" "0" "Menu" "main_menu"
-        pathDockerGS=$(sudo docker inspect --format='{{.GraphDriver.Data.LowerDir}}' "siakbary/dockergs:alpine-gc-3.4" | awk '{split($0,a,":"); print a[1]}')
+        Run "sudo docker pull siakbary/dockergs:alpine-gc-3.5" "Pull DockerGS Image" "0" "Menu" "main_menu"
+        pathDockerGS=$(sudo docker inspect --format='{{.GraphDriver.Data.LowerDir}}' "siakbary/dockergs:alpine-gc-3.5" | awk '{split($0,a,":"); print a[1]}')
         if [ ! -d "$grasscutter_path" ]; then
             mkdir -p "$grasscutter_path"
         fi
@@ -310,7 +310,7 @@ Pull_DockerGS_Image() {
         mv GC*Resources*/Resources $grasscutter_path/resources
         rm -rf GC*Resources*
         rm resourcesGCAndroid.zip
-        Run "sudo docker rmi siakbary/dockergs:alpine-gc-3.4" "Remove DockerGS Image" "0" "Menu" "main_menu"
+        Run "sudo docker rmi siakbary/dockergs:alpine-gc-3.5" "Remove DockerGS Image" "0" "Menu" "main_menu"
         echo "${GC}Generate config.json${WC}"
         timeout --foreground 8s java -jar grasscutter.jar &>/dev/null
         echo "${GC}Editing config.json...${WC}"
